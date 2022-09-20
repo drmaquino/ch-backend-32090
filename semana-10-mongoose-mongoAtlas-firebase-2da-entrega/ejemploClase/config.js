@@ -1,0 +1,2 @@
+// export const CNX_STR = 'mongodb://root:mongopassword@localhost/coderhouse?authSource=admin'
+export const CNX_STR = 'mongodb+srv://coderhouse:coderhouse@cluster0.o0eqf.mongodb.net/coderhouse?retryWrites=true&w=majority'
