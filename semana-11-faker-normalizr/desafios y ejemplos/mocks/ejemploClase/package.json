@@ -1,0 +1,14 @@
+{
+  "type": "module",
+  "name": "ejemploclase",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/test.js",
+    "atdd": "nodemon test/test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

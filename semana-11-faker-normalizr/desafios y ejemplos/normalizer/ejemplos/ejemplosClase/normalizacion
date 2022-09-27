@@ -1,0 +1,143 @@
+const persona = {
+    nombre: 'marian',
+    edad: 36,
+    direccion: 'rivadavia 1234',
+}
+
+/* tabla:
+
+:personas
+
+nombre | edad | direccion
+==============================
+marian | 36   | rivadavia 1234
+
+*/
+
+const persona2 = {
+    nombre: 'marian',
+    edad: 36,
+    direccion: {
+        calle: 'rivadavia',
+        numero: 1234,
+    }
+}
+
+/* tabla:
+
+:personas
+
+nombre | edad | direccionCalle | direccionNumero 
+================================================
+marian | 36   | rivadavia      | 1234 
+
+*/
+
+/* tabla:
+
+:direcciones
+
+id | calle      | numero
+=========================
+1  | rivadavia  | 1234 
+
+
+:personas
+
+nombre | edad | direccion
+=========================
+marian | 36   | 1
+-------------------------
+
+*/
+
+const estudiantes = [
+    {
+        nombre: 'pepe',
+        direccion: {
+            calle: 'nazca',
+            numero: 123,
+            barrio: {
+                nombre: 'almagro',
+                comuna: 5
+            }
+        },
+        mediosDeContacto: [
+            {
+                tipo: 'telefono',
+                valor: '11-3333-4444'
+            },
+            {
+                tipo: 'mail',
+                valor: 'abc@mail.com'
+            }
+        ]
+    },
+    {
+        nombre: 'pepa',
+        direccion: {
+            calle: 'nazca',
+            numero: 123,
+            barrio: {
+                nombre: 'almagro',
+                comuna: 5
+            }
+        },
+        mediosDeContacto: [
+            {
+                tipo: 'telefono',
+                valor: '11-3333-5555'
+            }
+        ]
+    },
+    {
+        nombre: 'lita',
+        direccion: {
+            calle: 'juan b justo',
+            numero: 1238,
+            barrio: {
+                nombre: 'almagro',
+                comuna: 5
+            }
+        },
+        mediosDeContacto: [
+            {
+                tipo: 'mail',
+                valor: 'xyz@mail.com'
+            }
+        ]
+    }
+]
+
+/*
+
+:estudiantes
+id | nombre | direccion 
+=======================
+1  | pepe   | 1         
+2  | lita   | 2         
+3  | pepa   | 1
+
+:direcciones
+id | calle         | numero | barrio
+=====================================
+1 | nazca          | 123    | 1
+2 | juan b justo   | 1238   | 1
+
+:barrios
+id | nombre  | comuna
+=====================
+1  | almagro | 5
+
+:medios_de_contacto
+idEstudiante | tipo    | valor
+========================
+1            | mail     | abc@mail.com
+2            | mail     | xyz@mail.com
+1            | telefono | 11-3333-4444
+
+SELECT nombre, calle, numero, telefono FROM
+        estudiantes JOIN direcciones on estudiantes.direccion = direccion.id
+        
+
+*/
