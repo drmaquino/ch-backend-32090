@@ -1,0 +1,16 @@
+{
+  "type": "module",
+  "name": "ejemplosclase",
+  "version": "1.0.0",
+  "main": "demo-minimist.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "minimist": "^1.2.7"
+  },
+  "description": ""
+}

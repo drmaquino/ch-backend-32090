@@ -1,38 +1,6 @@
-const express = require('express')
-
-/******************  JWT  ******************/
-
-const jwt = require("jsonwebtoken");
-
-const PRIVATE_KEY = "myprivatekey";
-
-function generateToken(user) {
-  const token = jwt.sign({ data: user }, PRIVATE_KEY, { expiresIn: '24h' });
-  return token;
-}
-
-function auth(req, res, next) {
-  const authHeader = req.headers.authorization;
-
-  if (!authHeader) {
-    return res.status(401).json({
-      error: 'not authenticated'
-    });
-  }
-
-  const token = authHeader.split(' ')[1];
-
-  jwt.verify(token, PRIVATE_KEY, (err, decoded) => {
-    if (err) {
-      return res.status(403).json({
-        error: 'not authorized'
-      });
-    }
-
-    req.user = decoded.data;
-    next();
-  });
-};
+import express from 'express';
+import { auth } from './auth.js';
+import { codificar } from "./jwt.js";
 
 /******************  DATABASE  ******************/
 
@@ -48,45 +16,55 @@ app.use(express.json())
 
 /******************  ROUTES  ******************/
 
-// REGISTER
-app.post('/register', (req, res) => {
+const authRouter = express.Router()
+const datosRouter = express.Router()
+
+authRouter.post('/register', postRegister)
+authRouter.post('/login', postLogin)
+datosRouter.get('/datos', auth, getDatos)
+
+app.use('/auth', authRouter)
+app.use('/datos', datosRouter)
+
+//===============================
+
+// controllers
+
+async function postRegister(req, res) {
 
   const { nombre, password, direccion } = req.body
 
   const yaExiste = usuarios.find(usuario => usuario.nombre == nombre)
   if (yaExiste) {
-    return res.json({ error: 'ya existe ese usuario' });
+    return res.status(409).json({ error: 'ya existe ese usuario' });
   }
 
   const usuario = { nombre, password, direccion }
 
   usuarios.push(usuario)
 
-  const access_token = generateToken(usuario)
+  const access_token = await codificar(usuario)
 
   res.json({ access_token })
-})
+}
 
-// LOGIN
-app.post('/login', (req, res) => {
+async function postLogin(req, res) {
 
   const { nombre, password } = req.body
 
   const usuario = usuarios.find(usuario => usuario.nombre == nombre && usuario.password == password)
   if (!usuario) {
-    return res.json({ error: 'credenciales invalidas' });
+    return res.status(401).json({ error: 'credenciales invalidas' });
   }
 
-  const access_token = generateToken(usuario)
+  const access_token = await codificar(usuario)
 
   res.json({ access_token })
-})
+}
 
-// DATOS
-app.get('/datos', auth, (req, res) => {
-  const usuario = usuarios.find(usuario => usuario.nombre == req.user.nombre);
-  res.json(usuario)
-})
+function getDatos(req, res) {
+  res.json(req.user)
+}
 
 /******************  LISTEN  ******************/
 

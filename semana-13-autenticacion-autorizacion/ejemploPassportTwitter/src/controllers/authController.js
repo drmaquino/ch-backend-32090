@@ -33,7 +33,7 @@ export function failRegisterController(req, res) {
 }
 
 export function successLoginController(req, res) {
-    res.json({ msg: 'ok' })
+    res.json({ msg: 'ok', datosUsuario: req.user })
 }
 
 export function failLoginController(req, res) {

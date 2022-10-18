@@ -1,17 +1,16 @@
 {
+  "name": "4",
   "type": "module",
-  "name": "ejemplo-session",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "desafio4.js",
   "scripts": {
-    "start": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1",
-    "jsonwebtoken": "^8.5.1"
+    "dotenv": "^10.0.0"
   }
 }

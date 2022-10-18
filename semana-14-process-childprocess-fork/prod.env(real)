@@ -1,0 +1,7 @@
+MONGODB_LOCAL=mongodb://localhost:27017/coderhouse
+MONGODB_REMOTO=mongodb+srv://coderhouse_user:coderhouse_password@mymaincluster.eucl2.mongodb.net/coderhouse?retryWrites=true&w=majority
+SQLITE3=./DB/ecommerce.sqlite
+MYSQL=mysql://coderhouse:coderhouse@localhost/coderhouse
+FILESYSTEM=./DB
+FACEBOOK_CLIENT_ID=261343709172083
+FACEBOOK_CLIENT_SECRET=ccf3f6a0b43557c4e2a0924f06a35b4e
