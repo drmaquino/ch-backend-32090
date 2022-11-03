@@ -1,0 +1,117 @@
+Statistical profiling result from isolate-0x651fd30-82285-v8.log, (44636 ticks, 1 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+  44392   99.5%          /home/drmaquino/.nvm/versions/node/v16.18.0/bin/node
+     58    0.1%          /usr/lib/x86_64-linux-gnu/libc.so.6
+      5    0.0%          /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+      6    0.0%    3.3%  LazyCompile: *normalizeString node:path:66:25
+      2    0.0%    1.1%  RegExp: ^[\^_`a-zA-Z\-0-9!#$%&'*+.|~]+$
+      2    0.0%    1.1%  Function: ^fromStringFast node:buffer:418:24
+      2    0.0%    1.1%  Function: ^_destroy node:_http_incoming:221:55
+      2    0.0%    1.1%  Function: ^<anonymous> file:///home/drmaquino/Documents/CODERHOUSE/coderhouse-backend-32090/semana-16-gzip-logs-debug-profiling/2da-parte-profiling/ejemplos/Profiling/server.js:32:23
+      1    0.0%    0.6%  RegExp: ^[!#$%&'*+.^_`|~0-9A-Za-z-]+$
+      1    0.0%    0.6%  RegExp: ^.*[\.\/\\]
+      1    0.0%    0.6%  LazyCompile: *next /home/drmaquino/Documents/CODERHOUSE/coderhouse-backend-32090/semana-16-gzip-logs-debug-profiling/2da-parte-profiling/ejemplos/Profiling/node_modules/express/lib/router/index.js:177:16
+      1    0.0%    0.6%  LazyCompile: *fastparse /home/drmaquino/Documents/CODERHOUSE/coderhouse-backend-32090/semana-16-gzip-logs-debug-profiling/2da-parte-profiling/ejemplos/Profiling/node_modules/parseurl/index.js:95:20
+      1    0.0%    0.6%  Function: ^utcDate node:internal/http:19:17
+      1    0.0%    0.6%  Function: ^unenroll node:timers:78:18
+      1    0.0%    0.6%  Function: ^toNamespacedPath node:path:1266:19
+      1    0.0%    0.6%  Function: ^setStreamTimeout node:internal/stream_base_commons:237:26
+      1    0.0%    0.6%  Function: ^setHeader node:_http_outgoing:642:57
+      1    0.0%    0.6%  Function: ^setCharset /home/drmaquino/Documents/CODERHOUSE/coderhouse-backend-32090/semana-16-gzip-logs-debug-profiling/2da-parte-profiling/ejemplos/Profiling/node_modules/express/lib/utils.js:248:41
+      1    0.0%    0.6%  Function: ^pushAsyncContext node:internal/async_hooks:539:26
+      1    0.0%    0.6%  Function: ^parserOnMessageComplete node:_http_common:146:33
+      1    0.0%    0.6%  Function: ^parseQueryStringValues /home/drmaquino/Documents/CODERHOUSE/coderhouse-backend-32090/semana-16-gzip-logs-debug-profiling/2da-parte-profiling/ejemplos/Profiling/node_modules/qs/lib/parse.js:51:50
+      1    0.0%    0.6%  Function: ^onstat /home/drmaquino/Documents/CODERHOUSE/coderhouse-backend-32090/semana-16-gzip-logs-debug-profiling/2da-parte-profiling/ejemplos/Profiling/node_modules/send/index.js:717:33
+      1    0.0%    0.6%  Function: ^normalizeParseOptions /home/drmaquino/Documents/CODERHOUSE/coderhouse-backend-32090/semana-16-gzip-logs-debug-profiling/2da-parte-profiling/ejemplos/Profiling/node_modules/qs/lib/parse.js:204:59
+      1    0.0%    0.6%  Function: ^next /home/drmaquino/Documents/CODERHOUSE/coderhouse-backend-32090/semana-16-gzip-logs-debug-profiling/2da-parte-profiling/ejemplos/Profiling/node_modules/express/lib/router/route.js:116:16
+      1    0.0%    0.6%  Function: ^next /home/drmaquino/Documents/CODERHOUSE/coderhouse-backend-32090/semana-16-gzip-logs-debug-profiling/2da-parte-profiling/ejemplos/Profiling/node_modules/express/lib/router/index.js:177:16
+      1    0.0%    0.6%  Function: ^module.exports /home/drmaquino/Documents/CODERHOUSE/coderhouse-backend-32090/semana-16-gzip-logs-debug-profiling/2da-parte-profiling/ejemplos/Profiling/node_modules/qs/lib/parse.js:239:27
+      1    0.0%    0.6%  Function: ^isstats /home/drmaquino/Documents/CODERHOUSE/coderhouse-backend-32090/semana-16-gzip-logs-debug-profiling/2da-parte-profiling/ejemplos/Profiling/node_modules/etag/index.js:104:18
+      1    0.0%    0.6%  Function: ^getTimerDuration node:internal/timers:383:26
+      1    0.0%    0.6%  Function: ^get node:internal/streams/writable:847:8
+      1    0.0%    0.6%  Function: ^get node:internal/streams/writable:791:8
+      1    0.0%    0.6%  Function: ^extname node:path:1385:10
+      1    0.0%    0.6%  Function: ^end node:_http_outgoing:953:45
+      1    0.0%    0.6%  Function: ^createError /home/drmaquino/Documents/CODERHOUSE/coderhouse-backend-32090/semana-16-gzip-logs-debug-profiling/2da-parte-profiling/ejemplos/Profiling/node_modules/http-errors/index.js:49:22
+      1    0.0%    0.6%  Function: ^clearBuffer node:internal/streams/writable:531:21
+      1    0.0%    0.6%  Function: ^assert node:internal/assert:11:16
+      1    0.0%    0.6%  Function: ^_storeHeader node:_http_outgoing:420:22
+      1    0.0%    0.6%  Function: ^_send node:_http_outgoing:336:49
+      1    0.0%    0.6%  Function: ^Readable.read node:internal/streams/readable:394:35
+      1    0.0%    0.6%  Function: ^Hash node:internal/crypto/hash:62:14
+      1    0.0%    0.6%  Function: ^<anonymous> node:_http_outgoing:612:44
+
+ [C++]:
+   ticks  total  nonlib   name
+     45    0.1%   24.9%  __write@@GLIBC_2.2.5
+     27    0.1%   14.9%  fwrite@@GLIBC_2.2.5
+     15    0.0%    8.3%  epoll_pwait@@GLIBC_2.6
+     13    0.0%    7.2%  std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)@@GLIBCXX_3.4.9
+      5    0.0%    2.8%  __libc_malloc@@GLIBC_2.2.5
+      5    0.0%    2.8%  _IO_file_xsputn@@GLIBC_2.2.5
+      4    0.0%    2.2%  std::ostream::sentry::sentry(std::ostream&)@@GLIBCXX_3.4
+      4    0.0%    2.2%  __read@@GLIBC_2.2.5
+      3    0.0%    1.7%  operator new(unsigned long)@@GLIBCXX_3.4
+      2    0.0%    1.1%  std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const@@GLIBCXX_3.4
+      2    0.0%    1.1%  getrusage@@GLIBC_2.2.5
+      2    0.0%    1.1%  __mprotect@@GLIBC_PRIVATE
+      1    0.0%    0.6%  pthread_cond_signal@@GLIBC_2.3.2
+      1    0.0%    0.6%  operator delete[](void*)@@GLIBCXX_3.4
+      1    0.0%    0.6%  cfree@GLIBC_2.2.5
+      1    0.0%    0.6%  accept4@@GLIBC_2.10
+      1    0.0%    0.6%  __pthread_mutex_lock@GLIBC_2.2.5
+      1    0.0%    0.6%  __munmap@@GLIBC_PRIVATE
+      1    0.0%    0.6%  _IO_setb@@GLIBC_2.2.5
+
+ [Summary]:
+   ticks  total  nonlib   name
+     46    0.1%   25.4%  JavaScript
+    134    0.3%   74.0%  C++
+     56    0.1%   30.9%  GC
+  44455   99.6%          Shared libraries
+      1    0.0%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+     31   36.0%    0.1%  __write@@GLIBC_2.2.5
+     23   26.7%    0.1%  fwrite@@GLIBC_2.2.5
+     11   12.8%    0.0%  std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)@@GLIBCXX_3.4.9
+      5    5.8%    0.0%  __libc_malloc@@GLIBC_2.2.5
+      5    5.8%    0.0%  _IO_file_xsputn@@GLIBC_2.2.5
+      3    3.5%    0.0%  std::ostream::sentry::sentry(std::ostream&)@@GLIBCXX_3.4
+      2    2.3%    0.0%  __mprotect@@GLIBC_PRIVATE
+      1    1.2%    0.0%  std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const@@GLIBCXX_3.4
+      1    1.2%    0.0%  operator new(unsigned long)@@GLIBCXX_3.4
+      1    1.2%    0.0%  operator delete[](void*)@@GLIBCXX_3.4
+      1    1.2%    0.0%  cfree@GLIBC_2.2.5
+      1    1.2%    0.0%  __pthread_mutex_lock@GLIBC_2.2.5
+      1    1.2%    0.0%  _IO_setb@@GLIBC_2.2.5
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+  44392   99.5%  /home/drmaquino/.nvm/versions/node/v16.18.0/bin/node
+  43950   99.0%    /home/drmaquino/.nvm/versions/node/v16.18.0/bin/node
+  42480   96.7%      Function: ^pbkdf2Sync node:internal/crypto/pbkdf2:69:20
+  42304   99.6%        Function: ^<anonymous> file:///home/drmaquino/Documents/CODERHOUSE/coderhouse-backend-32090/semana-16-gzip-logs-debug-profiling/2da-parte-profiling/ejemplos/Profiling/server.js:32:23
+  42304  100.0%          Function: ^handle /home/drmaquino/Documents/CODERHOUSE/coderhouse-backend-32090/semana-16-gzip-logs-debug-profiling/2da-parte-profiling/ejemplos/Profiling/node_modules/express/lib/router/layer.js:86:49
+  41880   99.0%            Function: ^next /home/drmaquino/Documents/CODERHOUSE/coderhouse-backend-32090/semana-16-gzip-logs-debug-profiling/2da-parte-profiling/ejemplos/Profiling/node_modules/express/lib/router/route.js:116:16
+    424    1.0%            LazyCompile: ~next /home/drmaquino/Documents/CODERHOUSE/coderhouse-backend-32090/semana-16-gzip-logs-debug-profiling/2da-parte-profiling/ejemplos/Profiling/node_modules/express/lib/router/route.js:116:16
+    786    1.8%      LazyCompile: ~pbkdf2Sync node:internal/crypto/pbkdf2:69:20
+    705   89.7%        LazyCompile: ~<anonymous> file:///home/drmaquino/Documents/CODERHOUSE/coderhouse-backend-32090/semana-16-gzip-logs-debug-profiling/2da-parte-profiling/ejemplos/Profiling/server.js:32:23
+    530   75.2%          Function: ^handle /home/drmaquino/Documents/CODERHOUSE/coderhouse-backend-32090/semana-16-gzip-logs-debug-profiling/2da-parte-profiling/ejemplos/Profiling/node_modules/express/lib/router/layer.js:86:49
+    530  100.0%            LazyCompile: ~next /home/drmaquino/Documents/CODERHOUSE/coderhouse-backend-32090/semana-16-gzip-logs-debug-profiling/2da-parte-profiling/ejemplos/Profiling/node_modules/express/lib/router/route.js:116:16
+    175   24.8%          LazyCompile: ~handle /home/drmaquino/Documents/CODERHOUSE/coderhouse-backend-32090/semana-16-gzip-logs-debug-profiling/2da-parte-profiling/ejemplos/Profiling/node_modules/express/lib/router/layer.js:86:49
+    175  100.0%            LazyCompile: ~next /home/drmaquino/Documents/CODERHOUSE/coderhouse-backend-32090/semana-16-gzip-logs-debug-profiling/2da-parte-profiling/ejemplos/Profiling/node_modules/express/lib/router/route.js:116:16
+     81   10.3%        LazyCompile: ~<anonymous> file:///home/drmaquino/Documents/CODERHOUSE/coderhouse-backend-32090/semana-16-gzip-logs-debug-profiling/2da-parte-profiling/ejemplos/Profiling/server.js:14:21
+     81  100.0%          LazyCompile: ~handle /home/drmaquino/Documents/CODERHOUSE/coderhouse-backend-32090/semana-16-gzip-logs-debug-profiling/2da-parte-profiling/ejemplos/Profiling/node_modules/express/lib/router/layer.js:86:49
+     81  100.0%            LazyCompile: ~next /home/drmaquino/Documents/CODERHOUSE/coderhouse-backend-32090/semana-16-gzip-logs-debug-profiling/2da-parte-profiling/ejemplos/Profiling/node_modules/express/lib/router/route.js:116:16
+

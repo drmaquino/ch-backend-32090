@@ -6,7 +6,7 @@
   "main": "server.js",
   "scripts": {
     "start": "0x server.js",
-    "setup": "curl -X GET 'http://localhost:8080/newUser?username=marian&password=qwerty123'",
+    "setup": "curl 'http://localhost:8080/newUser?username=marian&password=qwerty123'",
     "test": "npm run setup && node benchmark.js"
   },
   "keywords": [],

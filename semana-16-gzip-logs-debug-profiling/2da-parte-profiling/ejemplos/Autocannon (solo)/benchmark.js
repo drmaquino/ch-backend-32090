@@ -22,4 +22,4 @@ function run(url) {
 
 console.log('Running all benchmarks in parallel ...')
 
-run('http://localhost:8081/')
+run('http://localhost:8080/')
