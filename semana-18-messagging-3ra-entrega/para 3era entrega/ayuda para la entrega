@@ -1,0 +1,88 @@
+[POST] /api/carritos/{id_carrito}/productos -> para agregar un prod al carrito
+
+----------------------------------------------
+
+registro de usuario incluye:
+
+crear un usuario
+{
+    id: 'fs7d86g87fd6-gs7df6g78sfd-gs86df78gf',
+    email: 'fsdfasadfads'
+    contraseña: 'fsdfasdfwe'
+    nombre: 'marian',
+    apellido: 'aquino',
+    direccion: 'rivadavia 1234',
+    telefono: '11-3456-7889',
+    foto: 'http://servidor/api/images/3kj4h25kj2h34g5k2j34',
+}
+
+crear un carrito para ese usuario:
+
+{
+    id: 'fs7d86g87fd6-gs7df6g78sfd-gs86df78gf', // mismo id que el usuario!
+    productos: [
+        ...
+    ]
+}
+
+------------------------------------------------
+
+login de usuario:
+
+{ email, contraseña }
+
+se levanta una session
+
+req.user == {
+    id: 'fs7d86g87fd6-gs7df6g78sfd-gs86df78gf',
+    email: 'fsdfasadfads'
+    contraseña: 'fsdfasdfwe'
+    nombre: 'marian',
+    apellido: 'aquino',
+    direccion: 'rivadavia 1234',
+    telefono: '11-3456-7889',
+    foto: 'http://servidor/api/images/3kj4h25kj2h34g5k2j34',
+}
+
+POST /api/carritoProductos
+
+controller viejo:
+
+    app.post('/api/carrito/{idCarrito}/productos', (req, res, next) => {
+        const idCarrito = req.params.idCarrito
+        const idProducto = req.body.idProd
+        const result = await apiCarritos.guardarProducto(idCarrito, idProducto)
+        res.json(result)
+    }))
+
+controller nuevo:
+
+    app.post('/api/productosdelcarrito', soloUsuariosLogueados, (req, res, next) => {
+        const idCarrito = req.user.id
+        const idProducto = req.body.idProd
+        const result = await apiCarritos.guardarProducto(idCarrito, idProducto)
+        res.json(result)
+    }))
+
+--------------------------
+
+// DELETE /api/carrito/{idCarrito}  // no va mas
+
+POST /api/ordenes
+
+controller nuevo:
+
+    app.post('/api/ordenes', soloUsuariosLogueados, (req, res, next) => {
+        const idUsuario = req.user.id
+        const result = await apiOrdenes.crear(idUsuario)
+        res.json(result)
+    }))
+
+
+que tiene que pasar aca adentro? await apiOrdenes.crear(idUsuario)
+
+buscar al usuario por id para saber su mail y mandarle una confirmacion de comprar
+buscar los prod del carrito del usuario, pq vamos a necesitar saber qué quiere comprar
+mandarle mail al admin, con la lista de productos y los datos del usuario
+vamos a vaciar el carrito (con su id igual al del usuario)
+
