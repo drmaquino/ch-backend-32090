@@ -1,0 +1,17 @@
+{
+  "type": "module",
+  "name": "repository",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node --esm --experimental-specifier-resolution node testRepo.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/mongodb": "^3.6.17",
+    "mongodb": "^4.0.0-beta.3"
+  }
+}
