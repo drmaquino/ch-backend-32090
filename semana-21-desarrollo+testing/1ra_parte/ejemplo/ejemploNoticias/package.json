@@ -1,0 +1,21 @@
+{
+  "type": "module",
+  "name": "backend-noticias",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "NODE_ENV=development node .",
+    "start:prod": "NODE_ENV=production node ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mongodb": "^4.8.1",
+    "uuid": "^8.3.2"
+  }
+}
