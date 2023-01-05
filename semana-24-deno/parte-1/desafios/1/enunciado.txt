@@ -1,0 +1,15 @@
+﻿Crear un proyecto en Deno, configurando localmente Visual Studio Code para que interprete la sintaxis y características de la plataforma.
+
+Esta aplicación recibirá una cantidad ilimitada de parámetros numéricos y deberá determinar el valor mínimo, el máximo y el promedio entre todos ellos.
+
+Los resultados se almacenarán en un archivo llamado resultados.dat, sin utilizar librerías externas, respetando el siguiente formato:
+
+************************************
+Números: 4,5,33,7,94,56,......
+Mínimo: x
+Máximo: X
+Promedio: Y
+************************************
+
+En la consola se representarán los datos de la misma forma pero agregando además color al texto:
+la palabra mínimo y su valor se imprimirán en amarillo, el máximo en rojo y el promedio en verde, todos con fondo blanco.
