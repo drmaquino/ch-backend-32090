@@ -1,0 +1,44 @@
+{
+    "client": "Thunder Client",
+    "environmentName": "tp final",
+    "dateExported": "2022-08-25T15:29:54.691Z",
+    "version": "1.0",
+    "variables": [
+        {
+            "name": "SERVER",
+            "value": "xxx"
+        },
+        {
+            "name": "ACCESS_TOKEN",
+            "value": "xxx"
+        },
+        {
+            "name": "PRODUCT_ID",
+            "value": "xxx"
+        },
+        {
+            "name": "ORDER_ID",
+            "value": "xxx"
+        },
+        {
+            "name": "IMAGE_URL_1",
+            "value": "xxx"
+        },
+        {
+            "name": "IMAGE_URL_2",
+            "value": "xxx"
+        },
+        {
+            "name": "IMAGE_URL_3",
+            "value": "xxx"
+        },
+        {
+            "name": "USER_EMAIL",
+            "value": "xxx"
+        },
+        {
+            "name": "USER_ID",
+            "value": "xxx"
+        }
+    ]
+}
